@@ -448,28 +448,89 @@ main {
 }
 
 /* ========== CV Page ========== */
-.cv-header {
-  padding: 4rem 0 2rem;
-  text-align: center;
+.cv-hero {
+  padding: 4.5rem 0 3rem;
+  background: var(--color-bg-alt);
 }
 
-.cv-header h1 {
+.cv-hero-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+
+.cv-hero-avatar .avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-accent);
+  box-shadow: 0 0 0 6px var(--color-tag-bg);
+}
+
+.cv-hero-info h1 {
   font-size: 2.25rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
 }
 
-.cv-header p {
-  color: var(--color-text-secondary);
+.cv-hero-role {
   font-size: 1.05rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
-.cv-actions {
+.cv-hero-summary {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.75;
+  max-width: 640px;
+  margin-bottom: 1.25rem;
+}
+
+.cv-hero-links {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.cv-hero-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: all var(--transition);
+}
+
+.cv-hero-links a:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+@media (max-width: 768px) {
+  .cv-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cv-hero-summary {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cv-hero-links {
+    justify-content: center;
+  }
 }
 
 .btn {

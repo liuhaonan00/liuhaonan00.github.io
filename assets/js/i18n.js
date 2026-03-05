@@ -40,12 +40,9 @@
     },
 
     // ===== CV page =====
-    'cv.title': { zh: '个人简历', en: 'Resume' },
+    'cv.hero.name': { zh: 'Haonan Liu', en: 'Haonan Liu' },
     'cv.subtitle': { zh: 'Backend Engineer (Python & Go) | Web3 & LLM', en: 'Backend Engineer (Python & Go) | Web3 & LLM' },
-    'cv.download': { zh: '下载 PDF', en: 'Download PDF' },
-    'cv.contact': { zh: '联系我', en: 'Contact Me' },
-
-    'cv.summary': { zh: '个人概述', en: 'Summary' },
+    'cv.contact': { zh: '联系我', en: 'Contact' },
     'cv.summary.text': {
       zh: '8 年后端开发经验，擅长构建高并发分布式系统与生产级微服务。VibeTrading 联合创始人：一个开源的 LLM 驱动交易框架，支持策略生成、回测、分析和迭代进化。精通 Python & Go，善于利用 LLM 辅助开发快速迭代并保持生产质量。',
       en: 'Backend engineer with 8 years of experience building high-traffic distributed systems and production microservices. Co-founded VibeTrading: an open-source LLM-powered trading framework for strategy generation, backtesting, analysis, and iterative evolution. Strong in Python & Go, with experience using LLM-assisted development to iterate fast while maintaining production quality.'
