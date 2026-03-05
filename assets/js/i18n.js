@@ -9,23 +9,23 @@
 
     // ===== Index - Hero =====
     'hero.greeting': { zh: '你好，我是 Haonan 👋', en: 'Hi, I\'m Haonan 👋' },
-    'hero.subtitle': { zh: 'Software Engineer / 技术爱好者', en: 'Software Engineer / Tech Enthusiast' },
+    'hero.subtitle': { zh: 'Backend Engineer (Python & Go) | Web3 & LLM', en: 'Backend Engineer (Python & Go) | Web3 & LLM' },
     'hero.bio': {
-      zh: '热爱技术，专注于全栈开发与系统设计。喜欢探索新技术，并通过写作分享学习心得与项目经验。欢迎来到我的个人空间！',
-      en: 'Passionate about technology, focused on full-stack development and system design. I love exploring new technologies and sharing my learnings through writing. Welcome to my personal space!'
+      zh: '8 年后端开发经验，专注高并发分布式系统与微服务架构。VibeTrading 联合创始人，构建 LLM 驱动的开源交易框架。曾就职于 Grab、IBM、美团等公司。',
+      en: '8 years of backend experience building high-traffic distributed systems and production microservices. Co-founded VibeTrading, an open-source LLM-powered trading framework. Previously at Grab, IBM, and Meituan.'
     },
 
     // ===== Index - Skills =====
     'skills.title': { zh: '技术栈', en: 'Tech Stack' },
     'skills.desc': { zh: '我日常使用和擅长的技术领域', en: 'Technologies I work with daily' },
-    'skills.frontend': { zh: '前端开发', en: 'Frontend' },
-    'skills.frontend.desc': { zh: 'React, Vue, TypeScript, HTML/CSS, Tailwind', en: 'React, Vue, TypeScript, HTML/CSS, Tailwind' },
     'skills.backend': { zh: '后端开发', en: 'Backend' },
-    'skills.backend.desc': { zh: 'Python, Java, Node.js, Go, RESTful API', en: 'Python, Java, Node.js, Go, RESTful API' },
-    'skills.data': { zh: '数据与基础设施', en: 'Data & Infrastructure' },
-    'skills.data.desc': { zh: 'MySQL, PostgreSQL, Redis, Docker, K8s', en: 'MySQL, PostgreSQL, Redis, Docker, K8s' },
-    'skills.ai': { zh: 'AI & 机器学习', en: 'AI & Machine Learning' },
-    'skills.ai.desc': { zh: 'PyTorch, TensorFlow, NLP, LLM 应用', en: 'PyTorch, TensorFlow, NLP, LLM Applications' },
+    'skills.backend.desc': { zh: 'Go, Python, gRPC, Microservices', en: 'Go, Python, gRPC, Microservices' },
+    'skills.cloud': { zh: '云 & 基础设施', en: 'Cloud & Infra' },
+    'skills.cloud.desc': { zh: 'AWS, GCP, Docker, K8s, CI/CD', en: 'AWS, GCP, Docker, K8s, CI/CD' },
+    'skills.data': { zh: '数据 & 消息', en: 'Data & Messaging' },
+    'skills.data.desc': { zh: 'MySQL, Redis, DynamoDB, ElasticSearch, Kafka', en: 'MySQL, Redis, DynamoDB, ElasticSearch, Kafka' },
+    'skills.ai': { zh: 'AI / LLM', en: 'AI / LLM' },
+    'skills.ai.desc': { zh: 'LLM 辅助开发, RAG, VibeTrading', en: 'LLM-assisted Dev, RAG, VibeTrading' },
 
     // ===== Index - Recent Posts =====
     'posts.title': { zh: '最新文章', en: 'Latest Posts' },
@@ -41,51 +41,62 @@
 
     // ===== CV page =====
     'cv.title': { zh: '个人简历', en: 'Resume' },
-    'cv.subtitle': { zh: 'Education & Experience & Skills', en: 'Education & Experience & Skills' },
+    'cv.subtitle': { zh: 'Backend Engineer (Python & Go) | Web3 & LLM', en: 'Backend Engineer (Python & Go) | Web3 & LLM' },
     'cv.download': { zh: '下载 PDF', en: 'Download PDF' },
     'cv.contact': { zh: '联系我', en: 'Contact Me' },
+
+    'cv.summary': { zh: '个人概述', en: 'Summary' },
+    'cv.summary.text': {
+      zh: '8 年后端开发经验，擅长构建高并发分布式系统与生产级微服务。VibeTrading 联合创始人：一个开源的 LLM 驱动交易框架，支持策略生成、回测、分析和迭代进化。精通 Python & Go，善于利用 LLM 辅助开发快速迭代并保持生产质量。',
+      en: 'Backend engineer with 8 years of experience building high-traffic distributed systems and production microservices. Co-founded VibeTrading: an open-source LLM-powered trading framework for strategy generation, backtesting, analysis, and iterative evolution. Strong in Python & Go, with experience using LLM-assisted development to iterate fast while maintaining production quality.'
+    },
+
+    'cv.experience': { zh: '工作经历', en: 'Experience' },
+    'cv.exp1.time': { zh: '2025.03 - 至今（2025.12 起全职）', en: '2025.03 - Present (FT since 2025.12)' },
+    'cv.exp1.role': { zh: '联合创始人', en: 'Co-Founder' },
+    'cv.exp1.d1': { zh: '构建开源 LLM 驱动交易框架，实现策略生成 → 回测 → LLM 分析 → 迭代进化的统一闭环', en: 'Built an open-source LLM-powered trading framework enabling a unified loop: strategy generation → backtesting → LLM analysis → iterative evolution' },
+    'cv.exp1.d2': { zh: '设计并实现模块化流水线组件（策略层、回测引擎、分析层），注重可复现性与快速迭代', en: 'Designed and implemented modular pipeline components (strategy layer, backtest engine, analysis layer), focusing on reproducibility and fast iteration' },
+    'cv.exp1.d3': { zh: '在 Aster "Human vs AI" 交易大赛中取得 AI 组第 3 名的最高名次', en: 'Reached a peak rank of #3 in the Aster "Human vs AI" Trading Competition (AI Team)' },
+
+    'cv.exp2.time': { zh: '2024.12 - 2025.12', en: '2024.12 - 2025.12' },
+    'cv.exp2.role': { zh: '高级后端工程师', en: 'Senior Backend Engineer' },
+    'cv.exp2.org': { zh: '牡丹（BEHC）', en: 'Mudan (BEHC)' },
+    'cv.exp2.d1': { zh: '主导政企客户 IT 转型项目的后端交付，推动需求对齐与端到端执行', en: 'Led backend delivery for IT transformation initiatives across government and enterprise clients, driving requirements alignment and end-to-end execution' },
+    'cv.exp2.d2': { zh: '设计并构建基于 RAG 的 AI 问答助手（文档摄取、索引、检索与回答生成），提升内部知识访问效率', en: 'Designed and built an AI Q&A assistant with a RAG-based document system (document ingestion, indexing, retrieval, and answer generation)' },
+    'cv.exp2.d3': { zh: '牡丹商城核心服务现代化改造，包括 API 重构与集成，提升可维护性与交付速度', en: 'Modernized core services for Mudan Mall including API refactoring and integration work, improving maintainability and delivery velocity' },
+
+    'cv.exp3.time': { zh: '2021.08 - 2024.09', en: '2021.08 - 2024.09' },
+    'cv.exp3.role': { zh: '高级后端工程师', en: 'Senior Backend Engineer' },
+    'cv.exp3.d1': { zh: '主导 Grab Express 和 GrabFood 的 Go 微服务端到端设计与交付，使用 gRPC 进行服务间通信、Kafka 进行事件流处理；支撑日均 50 万+ 订单量，SLA 达 99.99%', en: 'Led end-to-end design and delivery of Go microservices for Grab Express and GrabFood, using gRPC for inter-service RPC and Kafka for event streaming; supported 500K+ daily orders with 99.99% SLA' },
+    'cv.exp3.d2': { zh: '关键路径性能与成本优化：通过 payload 压缩、gRPC 连接池/keepalive 调优、Redis Cluster 缓存，P99 延迟降低 40%，峰值 QPS 达 8K；通过动态资源调优年省 $85K', en: 'Improved P99 latency by 40% via payload compression, gRPC connection pooling/keepalive tuning, Redis Cluster caching; reached 8K QPS peak and saved $85K/year through dynamic resource tuning' },
+
+    'cv.exp4.time': { zh: '2019.01 - 2021.07', en: '2019.01 - 2021.07' },
+    'cv.exp4.role': { zh: '后端工程师', en: 'Backend Engineer' },
+    'cv.exp4.d1': { zh: '设计并实现 IBM Cloud Monitoring 可扩展阈值管理系统（Java/Go），通过动态阈值减少 25% 误报；部署于 Kubernetes，服务可用性达 99.98%', en: 'Designed and implemented a scalable threshold management system for IBM Cloud Monitoring using Java/Go, reducing false alerts by 25%; deployed on Kubernetes with 99.98% availability' },
+    'cv.exp4.d2': { zh: '使用 Docker 和 Kubernetes 容器化 15+ 遗留服务，通过自动扩缩策略优化资源分配，年省服务器成本 $120K，资源利用率提升 35%', en: 'Containerized 15+ legacy services using Docker and Kubernetes, optimizing resource allocation via auto-scaling; cut server costs by $120K/year and improved utilization by 35%' },
+    'cv.exp4.d3': { zh: '主导世界 500 强客户（中国银行、沃尔玛等）技术问题排查，关键事件 MTTR <15 分钟', en: 'Led technical troubleshooting for Fortune 500 clients (Bank of China, Walmart), resolving critical incidents with <15-min MTTR' },
+
+    'cv.exp5.time': { zh: '2017.07 - 2019.01', en: '2017.07 - 2019.01' },
+    'cv.exp5.role': { zh: '后端工程师', en: 'Backend Engineer' },
+    'cv.exp5.org': { zh: '美团点评', en: 'Meituan-Dianping' },
+    'cv.exp5.d1': { zh: '开发外卖商家排序推荐服务，支撑日均 2000 万+ 订单量，通过 Redis 和多线程处理将 API 延迟降低 40%', en: 'Developed the Waimai merchant ranking and recommendation service handling 20M+ daily orders, reducing API latency 40% with Redis and multi-threaded processing' },
+    'cv.exp5.d2': { zh: '构建 Scala/Spark 训练流水线，特征处理效率提升 67%，支持 40+ 特征', en: 'Built Scala/Spark-based training pipeline, accelerating feature processing by 67% and supporting 40+ features' },
+
     'cv.education': { zh: '教育经历', en: 'Education' },
-    'cv.edu.time': { zh: '2022.09 - 2026.06（预计）', en: '2022.09 - 2026.06 (Expected)' },
-    'cv.edu.degree': { zh: '计算机科学与技术 · 本科', en: 'B.S. in Computer Science' },
-    'cv.edu.org': { zh: 'XX 大学', en: 'XX University' },
-    'cv.edu.courses': { zh: '主修课程：数据结构与算法、操作系统、计算机网络、数据库系统、机器学习', en: 'Core courses: Data Structures & Algorithms, OS, Computer Networks, Database Systems, Machine Learning' },
-    'cv.edu.gpa': { zh: 'GPA：3.8 / 4.0', en: 'GPA: 3.8 / 4.0' },
-    'cv.edu.award': { zh: '获得 XX 奖学金', en: 'Received XX Scholarship' },
-
-    'cv.experience': { zh: '工作 / 实习经历', en: 'Work Experience' },
-    'cv.exp1.time': { zh: '2025.06 - 2025.09', en: '2025.06 - 2025.09' },
-    'cv.exp1.role': { zh: '软件开发实习生', en: 'Software Development Intern' },
-    'cv.exp1.org': { zh: 'XX 科技公司', en: 'XX Tech Company' },
-    'cv.exp1.d1': { zh: '参与核心业务后端系统的开发与维护，使用 Java / Spring Boot', en: 'Developed and maintained core backend systems with Java / Spring Boot' },
-    'cv.exp1.d2': { zh: '设计并实现 RESTful API，支撑前端多个业务模块', en: 'Designed and implemented RESTful APIs supporting multiple frontend modules' },
-    'cv.exp1.d3': { zh: '优化数据库查询性能，关键接口响应时间降低 40%', en: 'Optimized database query performance, reducing key API response time by 40%' },
-    'cv.exp1.d4': { zh: '编写单元测试与集成测试，覆盖率达 85%', en: 'Wrote unit and integration tests, achieving 85% code coverage' },
-
-    'cv.exp2.time': { zh: '2024.12 - 2025.03', en: '2024.12 - 2025.03' },
-    'cv.exp2.role': { zh: '前端开发实习生', en: 'Frontend Development Intern' },
-    'cv.exp2.org': { zh: 'XX 互联网公司', en: 'XX Internet Company' },
-    'cv.exp2.d1': { zh: '使用 React + TypeScript 开发企业级管理后台', en: 'Built enterprise admin dashboard with React + TypeScript' },
-    'cv.exp2.d2': { zh: '实现复杂表单、数据可视化等交互组件', en: 'Implemented complex forms, data visualization, and interactive components' },
-    'cv.exp2.d3': { zh: '与设计和产品团队紧密协作，完成多个迭代交付', en: 'Collaborated closely with design and product teams across multiple sprints' },
-
-    'cv.projects': { zh: '项目经历', en: 'Projects' },
-    'cv.proj1.time': { zh: '2025.09 - 至今', en: '2025.09 - Present' },
-    'cv.proj1.name': { zh: '个人技术博客', en: 'Personal Tech Blog' },
-    'cv.proj1.org': { zh: '个人项目', en: 'Personal Project' },
-    'cv.proj1.d1': { zh: '基于 GitHub Pages 搭建的静态博客，支持暗色模式和响应式设计', en: 'Static blog on GitHub Pages with dark mode and responsive design' },
-    'cv.proj1.d2': { zh: '撰写系统设计、前端性能优化、容器化部署等技术文章', en: 'Writing articles on system design, frontend performance, and containerized deployments' },
-
-    'cv.proj2.time': { zh: '2025.03 - 2025.06', en: '2025.03 - 2025.06' },
-    'cv.proj2.name': { zh: '智能问答系统', en: 'Intelligent Q&A System' },
-    'cv.proj2.org': { zh: '课程项目', en: 'Course Project' },
-    'cv.proj2.d1': { zh: '基于 LLM 构建的智能问答系统，支持多轮对话与知识库检索', en: 'LLM-based Q&A system supporting multi-turn conversations and knowledge base retrieval' },
-    'cv.proj2.d2': { zh: '使用 RAG（Retrieval-Augmented Generation）架构提升回答准确性', en: 'Used RAG (Retrieval-Augmented Generation) architecture to improve answer accuracy' },
-    'cv.proj2.d3': { zh: '后端使用 Python FastAPI，前端使用 React', en: 'Backend: Python FastAPI, Frontend: React' },
+    'cv.edu1.time': { zh: '2016.02 - 2017.01', en: '2016.02 - 2017.01' },
+    'cv.edu1.degree': { zh: '信息技术硕士 (Master of IT)', en: 'Master of Information Technology' },
+    'cv.edu1.org': { zh: '新南威尔士大学 (UNSW)', en: 'The University of New South Wales (UNSW)' },
+    'cv.edu2.time': { zh: '2010.08 - 2015.06', en: '2010.08 - 2015.06' },
+    'cv.edu2.degree': { zh: '软件工程学士 (B.Eng.)', en: 'B.Eng., Software Engineering' },
+    'cv.edu2.org': { zh: '北京理工大学', en: 'Beijing Institute of Technology' },
+    'cv.edu2.exchange': { zh: '交换项目：澳大利亚国立大学 (ANU)，2013.02 - 2014.12', en: 'Exchange program: The Australian National University (ANU), 2013.02 - 2014.12' },
 
     'cv.skills': { zh: '技术技能', en: 'Technical Skills' },
     'cv.skills.lang': { zh: '编程语言', en: 'Programming Languages' },
-    'cv.skills.framework': { zh: '框架与工具', en: 'Frameworks & Tools' },
-    'cv.skills.db': { zh: '数据库与中间件', en: 'Databases & Middleware' },
+    'cv.skills.cloud': { zh: '云 & 基础设施', en: 'Cloud & Infrastructure' },
+    'cv.skills.data': { zh: '数据 & 消息', en: 'Data & Messaging' },
+    'cv.skills.ai': { zh: 'AI / LLM', en: 'AI / LLM' },
+    'cv.cert': { zh: '认证', en: 'Certification' },
 
     // ===== Blog post pages (UI only) =====
     'post.back': { zh: '← 返回文章列表', en: '← Back to Posts' },

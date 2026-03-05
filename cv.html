@@ -19,7 +19,7 @@
     <section class="cv-header">
       <div class="container">
         <h1 class="fade-in" data-i18n="cv.title">个人简历</h1>
-        <p class="fade-in" data-i18n="cv.subtitle">Education & Experience & Skills</p>
+        <p class="fade-in" data-i18n="cv.subtitle">Backend Engineer (Python & Go) | Web3 & LLM</p>
         <div class="cv-actions fade-in">
           <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> <span data-i18n="cv.download">下载 PDF</span></a>
           <a href="mailto:liuhaonan00@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> <span data-i18n="cv.contact">联系我</span></a>
@@ -27,19 +27,100 @@
       </div>
     </section>
 
+    <!-- Summary -->
+    <section class="cv-section">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-user"></i> <span data-i18n="cv.summary">个人概述</span></h2>
+        <div class="fade-in" style="color:var(--color-text-secondary);line-height:1.8;">
+          <p data-i18n="cv.summary.text">8 年后端开发经验，擅长构建高并发分布式系统与生产级微服务。VibeTrading 联合创始人：一个开源的 LLM 驱动交易框架，支持策略生成、回测、分析和迭代进化。精通 Python & Go，善于利用 LLM 辅助开发快速迭代并保持生产质量。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="cv-section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-briefcase"></i> <span data-i18n="cv.experience">工作经历</span></h2>
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="time-range" data-i18n="cv.exp1.time">2025.03 - 至今（2025.12 起全职）</div>
+            <h3 data-i18n="cv.exp1.role">联合创始人</h3>
+            <div class="org">VibeTrading · <a href="https://vibetrading.dev" target="_blank">vibetrading.dev</a></div>
+            <div class="desc">
+              <ul>
+                <li data-i18n="cv.exp1.d1">构建开源 LLM 驱动交易框架，实现策略生成 → 回测 → LLM 分析 → 迭代进化的统一闭环</li>
+                <li data-i18n="cv.exp1.d2">设计并实现模块化流水线组件（策略层、回测引擎、分析层），注重可复现性与快速迭代</li>
+                <li data-i18n="cv.exp1.d3">在 Aster "Human vs AI" 交易大赛中取得 AI 组第 3 名的最高名次</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range" data-i18n="cv.exp2.time">2024.12 - 2025.12</div>
+            <h3 data-i18n="cv.exp2.role">高级后端工程师</h3>
+            <div class="org" data-i18n="cv.exp2.org">牡丹（BEHC）</div>
+            <div class="desc">
+              <ul>
+                <li data-i18n="cv.exp2.d1">主导政企客户 IT 转型项目的后端交付，推动需求对齐与端到端执行</li>
+                <li data-i18n="cv.exp2.d2">设计并构建基于 RAG 的 AI 问答助手（文档摄取、索引、检索与回答生成），提升内部知识访问效率</li>
+                <li data-i18n="cv.exp2.d3">牡丹商城核心服务现代化改造，包括 API 重构与集成，提升可维护性与交付速度</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range" data-i18n="cv.exp3.time">2021.08 - 2024.09</div>
+            <h3 data-i18n="cv.exp3.role">高级后端工程师</h3>
+            <div class="org">Grab</div>
+            <div class="desc">
+              <ul>
+                <li data-i18n="cv.exp3.d1">主导 Grab Express 和 GrabFood 的 Go 微服务端到端设计与交付，使用 gRPC 进行服务间通信、Kafka 进行事件流处理；支撑日均 50 万+ 订单量，SLA 达 99.99%</li>
+                <li data-i18n="cv.exp3.d2">关键路径性能与成本优化：通过 payload 压缩、gRPC 连接池/keepalive 调优、Redis Cluster 缓存，P99 延迟降低 40%，峰值 QPS 达 8K；通过动态资源调优年省 $85K</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range" data-i18n="cv.exp4.time">2019.01 - 2021.07</div>
+            <h3 data-i18n="cv.exp4.role">后端工程师</h3>
+            <div class="org">IBM Cloud (CDL)</div>
+            <div class="desc">
+              <ul>
+                <li data-i18n="cv.exp4.d1">设计并实现 IBM Cloud Monitoring 可扩展阈值管理系统（Java/Go），通过动态阈值减少 25% 误报；部署于 Kubernetes，服务可用性达 99.98%</li>
+                <li data-i18n="cv.exp4.d2">使用 Docker 和 Kubernetes 容器化 15+ 遗留服务，通过自动扩缩策略优化资源分配，年省服务器成本 $120K，资源利用率提升 35%</li>
+                <li data-i18n="cv.exp4.d3">主导世界 500 强客户（中国银行、沃尔玛等）技术问题排查，关键事件 MTTR &lt;15 分钟</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range" data-i18n="cv.exp5.time">2017.07 - 2019.01</div>
+            <h3 data-i18n="cv.exp5.role">后端工程师</h3>
+            <div class="org" data-i18n="cv.exp5.org">美团点评</div>
+            <div class="desc">
+              <ul>
+                <li data-i18n="cv.exp5.d1">开发外卖商家排序推荐服务，支撑日均 2000 万+ 订单量，通过 Redis 和多线程处理将 API 延迟降低 40%</li>
+                <li data-i18n="cv.exp5.d2">构建 Scala/Spark 训练流水线，特征处理效率提升 67%，支持 40+ 特征</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
     <section class="cv-section">
       <div class="container">
         <h2 class="cv-section-title fade-in"><i class="fas fa-graduation-cap"></i> <span data-i18n="cv.education">教育经历</span></h2>
         <div class="timeline">
           <div class="timeline-item fade-in">
-            <div class="time-range" data-i18n="cv.edu.time">2022.09 - 2026.06（预计）</div>
-            <h3 data-i18n="cv.edu.degree">计算机科学与技术 · 本科</h3>
-            <div class="org" data-i18n="cv.edu.org">XX 大学</div>
+            <div class="time-range" data-i18n="cv.edu1.time">2016.02 - 2017.01</div>
+            <h3 data-i18n="cv.edu1.degree">信息技术硕士 (Master of IT)</h3>
+            <div class="org" data-i18n="cv.edu1.org">新南威尔士大学 (UNSW)</div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range" data-i18n="cv.edu2.time">2010.08 - 2015.06</div>
+            <h3 data-i18n="cv.edu2.degree">软件工程学士 (B.Eng.)</h3>
+            <div class="org" data-i18n="cv.edu2.org">北京理工大学</div>
             <div class="desc">
               <ul>
-                <li data-i18n="cv.edu.courses">主修课程：数据结构与算法、操作系统、计算机网络、数据库系统、机器学习</li>
-                <li data-i18n="cv.edu.gpa">GPA：3.8 / 4.0</li>
-                <li data-i18n="cv.edu.award">获得 XX 奖学金</li>
+                <li data-i18n="cv.edu2.exchange">交换项目：澳大利亚国立大学 (ANU)，2013.02 - 2014.12</li>
               </ul>
             </div>
           </div>
@@ -47,105 +128,56 @@
       </div>
     </section>
 
-    <section class="cv-section" style="background: var(--color-bg-alt);">
-      <div class="container">
-        <h2 class="cv-section-title fade-in"><i class="fas fa-briefcase"></i> <span data-i18n="cv.experience">工作 / 实习经历</span></h2>
-        <div class="timeline">
-          <div class="timeline-item fade-in">
-            <div class="time-range" data-i18n="cv.exp1.time">2025.06 - 2025.09</div>
-            <h3 data-i18n="cv.exp1.role">软件开发实习生</h3>
-            <div class="org" data-i18n="cv.exp1.org">XX 科技公司</div>
-            <div class="desc">
-              <ul>
-                <li data-i18n="cv.exp1.d1">参与核心业务后端系统的开发与维护，使用 Java / Spring Boot</li>
-                <li data-i18n="cv.exp1.d2">设计并实现 RESTful API，支撑前端多个业务模块</li>
-                <li data-i18n="cv.exp1.d3">优化数据库查询性能，关键接口响应时间降低 40%</li>
-                <li data-i18n="cv.exp1.d4">编写单元测试与集成测试，覆盖率达 85%</li>
-              </ul>
-            </div>
-          </div>
-          <div class="timeline-item fade-in">
-            <div class="time-range" data-i18n="cv.exp2.time">2024.12 - 2025.03</div>
-            <h3 data-i18n="cv.exp2.role">前端开发实习生</h3>
-            <div class="org" data-i18n="cv.exp2.org">XX 互联网公司</div>
-            <div class="desc">
-              <ul>
-                <li data-i18n="cv.exp2.d1">使用 React + TypeScript 开发企业级管理后台</li>
-                <li data-i18n="cv.exp2.d2">实现复杂表单、数据可视化等交互组件</li>
-                <li data-i18n="cv.exp2.d3">与设计和产品团队紧密协作，完成多个迭代交付</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="cv-section">
-      <div class="container">
-        <h2 class="cv-section-title fade-in"><i class="fas fa-code"></i> <span data-i18n="cv.projects">项目经历</span></h2>
-        <div class="timeline">
-          <div class="timeline-item fade-in">
-            <div class="time-range" data-i18n="cv.proj1.time">2025.09 - 至今</div>
-            <h3 data-i18n="cv.proj1.name">个人技术博客</h3>
-            <div class="org" data-i18n="cv.proj1.org">个人项目</div>
-            <div class="desc">
-              <ul>
-                <li data-i18n="cv.proj1.d1">基于 GitHub Pages 搭建的静态博客，支持暗色模式和响应式设计</li>
-                <li data-i18n="cv.proj1.d2">撰写系统设计、前端性能优化、容器化部署等技术文章</li>
-              </ul>
-            </div>
-          </div>
-          <div class="timeline-item fade-in">
-            <div class="time-range" data-i18n="cv.proj2.time">2025.03 - 2025.06</div>
-            <h3 data-i18n="cv.proj2.name">智能问答系统</h3>
-            <div class="org" data-i18n="cv.proj2.org">课程项目</div>
-            <div class="desc">
-              <ul>
-                <li data-i18n="cv.proj2.d1">基于 LLM 构建的智能问答系统，支持多轮对话与知识库检索</li>
-                <li data-i18n="cv.proj2.d2">使用 RAG（Retrieval-Augmented Generation）架构提升回答准确性</li>
-                <li data-i18n="cv.proj2.d3">后端使用 Python FastAPI，前端使用 React</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <!-- Skills -->
     <section class="cv-section" style="background: var(--color-bg-alt);">
       <div class="container">
         <h2 class="cv-section-title fade-in"><i class="fas fa-tools"></i> <span data-i18n="cv.skills">技术技能</span></h2>
         <div style="margin-bottom:1.5rem;" class="fade-in">
           <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.lang">编程语言</h3>
           <div class="cv-skills-grid">
-            <span class="cv-skill-tag">Python</span>
-            <span class="cv-skill-tag">Java</span>
-            <span class="cv-skill-tag">JavaScript / TypeScript</span>
             <span class="cv-skill-tag">Go</span>
-            <span class="cv-skill-tag">C/C++</span>
-            <span class="cv-skill-tag">SQL</span>
+            <span class="cv-skill-tag">Python</span>
           </div>
         </div>
         <div style="margin-bottom:1.5rem;" class="fade-in">
-          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.framework">框架与工具</h3>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.cloud">云 & 基础设施</h3>
           <div class="cv-skills-grid">
-            <span class="cv-skill-tag">React</span>
-            <span class="cv-skill-tag">Vue.js</span>
-            <span class="cv-skill-tag">Spring Boot</span>
-            <span class="cv-skill-tag">FastAPI</span>
-            <span class="cv-skill-tag">Node.js</span>
+            <span class="cv-skill-tag">AWS</span>
+            <span class="cv-skill-tag">GCP</span>
             <span class="cv-skill-tag">Docker</span>
             <span class="cv-skill-tag">Kubernetes</span>
-            <span class="cv-skill-tag">Git</span>
+            <span class="cv-skill-tag">CI/CD</span>
+          </div>
+        </div>
+        <div style="margin-bottom:1.5rem;" class="fade-in">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.data">数据 & 消息</h3>
+          <div class="cv-skills-grid">
+            <span class="cv-skill-tag">MySQL</span>
+            <span class="cv-skill-tag">Redis</span>
+            <span class="cv-skill-tag">DynamoDB</span>
+            <span class="cv-skill-tag">ElasticSearch</span>
+            <span class="cv-skill-tag">Kafka</span>
+            <span class="cv-skill-tag">SQS</span>
           </div>
         </div>
         <div class="fade-in">
-          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.db">数据库与中间件</h3>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.ai">AI / LLM</h3>
           <div class="cv-skills-grid">
-            <span class="cv-skill-tag">MySQL</span>
-            <span class="cv-skill-tag">PostgreSQL</span>
-            <span class="cv-skill-tag">Redis</span>
-            <span class="cv-skill-tag">MongoDB</span>
-            <span class="cv-skill-tag">Kafka</span>
+            <span class="cv-skill-tag">LLM Dev</span>
+            <span class="cv-skill-tag">RAG</span>
+            <span class="cv-skill-tag">Prompt-to-Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certification -->
+    <section class="cv-section">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-certificate"></i> <span data-i18n="cv.cert">认证</span></h2>
+        <div class="fade-in">
+          <div class="cv-skills-grid">
+            <span class="cv-skill-tag">AWS Certified Solutions Architect – Associate</span>
           </div>
         </div>
       </div>
