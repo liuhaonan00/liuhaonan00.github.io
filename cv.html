@@ -13,53 +13,33 @@
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="index.html" class="logo">&lt;<span>H</span>&gt;</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="cv.html" class="active">简历</a></li>
-        <li><a href="blog/">技术分享</a></li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:0.5rem;">
-        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
-          <i class="fas fa-moon"></i>
-        </button>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar" id="navbar"></nav>
 
   <main>
-    <!-- CV Header -->
     <section class="cv-header">
       <div class="container">
-        <h1 class="fade-in">个人简历</h1>
-        <p class="fade-in">Education & Experience & Skills</p>
+        <h1 class="fade-in" data-i18n="cv.title">个人简历</h1>
+        <p class="fade-in" data-i18n="cv.subtitle">Education & Experience & Skills</p>
         <div class="cv-actions fade-in">
-          <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> 下载 PDF</a>
-          <a href="mailto:liuhaonan00@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> 联系我</a>
+          <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> <span data-i18n="cv.download">下载 PDF</span></a>
+          <a href="mailto:liuhaonan00@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> <span data-i18n="cv.contact">联系我</span></a>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
     <section class="cv-section">
       <div class="container">
-        <h2 class="cv-section-title fade-in"><i class="fas fa-graduation-cap"></i> 教育经历</h2>
+        <h2 class="cv-section-title fade-in"><i class="fas fa-graduation-cap"></i> <span data-i18n="cv.education">教育经历</span></h2>
         <div class="timeline">
           <div class="timeline-item fade-in">
-            <div class="time-range">2022.09 - 2026.06（预计）</div>
-            <h3>计算机科学与技术 · 本科</h3>
-            <div class="org">XX 大学</div>
+            <div class="time-range" data-i18n="cv.edu.time">2022.09 - 2026.06（预计）</div>
+            <h3 data-i18n="cv.edu.degree">计算机科学与技术 · 本科</h3>
+            <div class="org" data-i18n="cv.edu.org">XX 大学</div>
             <div class="desc">
               <ul>
-                <li>主修课程：数据结构与算法、操作系统、计算机网络、数据库系统、机器学习</li>
-                <li>GPA：3.8 / 4.0</li>
-                <li>获得 XX 奖学金</li>
+                <li data-i18n="cv.edu.courses">主修课程：数据结构与算法、操作系统、计算机网络、数据库系统、机器学习</li>
+                <li data-i18n="cv.edu.gpa">GPA：3.8 / 4.0</li>
+                <li data-i18n="cv.edu.award">获得 XX 奖学金</li>
               </ul>
             </div>
           </div>
@@ -67,33 +47,32 @@
       </div>
     </section>
 
-    <!-- Experience -->
     <section class="cv-section" style="background: var(--color-bg-alt);">
       <div class="container">
-        <h2 class="cv-section-title fade-in"><i class="fas fa-briefcase"></i> 工作 / 实习经历</h2>
+        <h2 class="cv-section-title fade-in"><i class="fas fa-briefcase"></i> <span data-i18n="cv.experience">工作 / 实习经历</span></h2>
         <div class="timeline">
           <div class="timeline-item fade-in">
-            <div class="time-range">2025.06 - 2025.09</div>
-            <h3>软件开发实习生</h3>
-            <div class="org">XX 科技公司</div>
+            <div class="time-range" data-i18n="cv.exp1.time">2025.06 - 2025.09</div>
+            <h3 data-i18n="cv.exp1.role">软件开发实习生</h3>
+            <div class="org" data-i18n="cv.exp1.org">XX 科技公司</div>
             <div class="desc">
               <ul>
-                <li>参与核心业务后端系统的开发与维护，使用 Java / Spring Boot</li>
-                <li>设计并实现 RESTful API，支撑前端多个业务模块</li>
-                <li>优化数据库查询性能，关键接口响应时间降低 40%</li>
-                <li>编写单元测试与集成测试，覆盖率达 85%</li>
+                <li data-i18n="cv.exp1.d1">参与核心业务后端系统的开发与维护，使用 Java / Spring Boot</li>
+                <li data-i18n="cv.exp1.d2">设计并实现 RESTful API，支撑前端多个业务模块</li>
+                <li data-i18n="cv.exp1.d3">优化数据库查询性能，关键接口响应时间降低 40%</li>
+                <li data-i18n="cv.exp1.d4">编写单元测试与集成测试，覆盖率达 85%</li>
               </ul>
             </div>
           </div>
           <div class="timeline-item fade-in">
-            <div class="time-range">2024.12 - 2025.03</div>
-            <h3>前端开发实习生</h3>
-            <div class="org">XX 互联网公司</div>
+            <div class="time-range" data-i18n="cv.exp2.time">2024.12 - 2025.03</div>
+            <h3 data-i18n="cv.exp2.role">前端开发实习生</h3>
+            <div class="org" data-i18n="cv.exp2.org">XX 互联网公司</div>
             <div class="desc">
               <ul>
-                <li>使用 React + TypeScript 开发企业级管理后台</li>
-                <li>实现复杂表单、数据可视化等交互组件</li>
-                <li>与设计和产品团队紧密协作，完成多个迭代交付</li>
+                <li data-i18n="cv.exp2.d1">使用 React + TypeScript 开发企业级管理后台</li>
+                <li data-i18n="cv.exp2.d2">实现复杂表单、数据可视化等交互组件</li>
+                <li data-i18n="cv.exp2.d3">与设计和产品团队紧密协作，完成多个迭代交付</li>
               </ul>
             </div>
           </div>
@@ -101,31 +80,30 @@
       </div>
     </section>
 
-    <!-- Projects -->
     <section class="cv-section">
       <div class="container">
-        <h2 class="cv-section-title fade-in"><i class="fas fa-code"></i> 项目经历</h2>
+        <h2 class="cv-section-title fade-in"><i class="fas fa-code"></i> <span data-i18n="cv.projects">项目经历</span></h2>
         <div class="timeline">
           <div class="timeline-item fade-in">
-            <div class="time-range">2025.09 - 至今</div>
-            <h3>个人技术博客</h3>
-            <div class="org">个人项目</div>
+            <div class="time-range" data-i18n="cv.proj1.time">2025.09 - 至今</div>
+            <h3 data-i18n="cv.proj1.name">个人技术博客</h3>
+            <div class="org" data-i18n="cv.proj1.org">个人项目</div>
             <div class="desc">
               <ul>
-                <li>基于 GitHub Pages 搭建的静态博客，支持暗色模式和响应式设计</li>
-                <li>撰写系统设计、前端性能优化、容器化部署等技术文章</li>
+                <li data-i18n="cv.proj1.d1">基于 GitHub Pages 搭建的静态博客，支持暗色模式和响应式设计</li>
+                <li data-i18n="cv.proj1.d2">撰写系统设计、前端性能优化、容器化部署等技术文章</li>
               </ul>
             </div>
           </div>
           <div class="timeline-item fade-in">
-            <div class="time-range">2025.03 - 2025.06</div>
-            <h3>智能问答系统</h3>
-            <div class="org">课程项目</div>
+            <div class="time-range" data-i18n="cv.proj2.time">2025.03 - 2025.06</div>
+            <h3 data-i18n="cv.proj2.name">智能问答系统</h3>
+            <div class="org" data-i18n="cv.proj2.org">课程项目</div>
             <div class="desc">
               <ul>
-                <li>基于 LLM 构建的智能问答系统，支持多轮对话与知识库检索</li>
-                <li>使用 RAG（Retrieval-Augmented Generation）架构提升回答准确性</li>
-                <li>后端使用 Python FastAPI，前端使用 React</li>
+                <li data-i18n="cv.proj2.d1">基于 LLM 构建的智能问答系统，支持多轮对话与知识库检索</li>
+                <li data-i18n="cv.proj2.d2">使用 RAG（Retrieval-Augmented Generation）架构提升回答准确性</li>
+                <li data-i18n="cv.proj2.d3">后端使用 Python FastAPI，前端使用 React</li>
               </ul>
             </div>
           </div>
@@ -133,12 +111,11 @@
       </div>
     </section>
 
-    <!-- Skills -->
     <section class="cv-section" style="background: var(--color-bg-alt);">
       <div class="container">
-        <h2 class="cv-section-title fade-in"><i class="fas fa-tools"></i> 技术技能</h2>
+        <h2 class="cv-section-title fade-in"><i class="fas fa-tools"></i> <span data-i18n="cv.skills">技术技能</span></h2>
         <div style="margin-bottom:1.5rem;" class="fade-in">
-          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);">编程语言</h3>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.lang">编程语言</h3>
           <div class="cv-skills-grid">
             <span class="cv-skill-tag">Python</span>
             <span class="cv-skill-tag">Java</span>
@@ -149,7 +126,7 @@
           </div>
         </div>
         <div style="margin-bottom:1.5rem;" class="fade-in">
-          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);">框架与工具</h3>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.framework">框架与工具</h3>
           <div class="cv-skills-grid">
             <span class="cv-skill-tag">React</span>
             <span class="cv-skill-tag">Vue.js</span>
@@ -162,7 +139,7 @@
           </div>
         </div>
         <div class="fade-in">
-          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);">数据库与中间件</h3>
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);" data-i18n="cv.skills.db">数据库与中间件</h3>
           <div class="cv-skills-grid">
             <span class="cv-skill-tag">MySQL</span>
             <span class="cv-skill-tag">PostgreSQL</span>
@@ -175,13 +152,14 @@
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+      <p data-i18n="footer.text" data-i18n-html>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
     </div>
   </footer>
 
+  <script src="assets/js/navbar.js"></script>
+  <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 </html>

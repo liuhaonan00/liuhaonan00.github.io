@@ -13,38 +13,20 @@
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="../index.html" class="logo">&lt;<span>H</span>&gt;</a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="../index.html">首页</a></li>
-        <li><a href="../cv.html">简历</a></li>
-        <li><a href="./" class="active">技术分享</a></li>
-      </ul>
-      <div style="display:flex;align-items:center;gap:0.5rem;">
-        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
-          <i class="fas fa-moon"></i>
-        </button>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </div>
-  </nav>
+  <nav class="navbar" id="navbar"></nav>
 
   <main>
     <section class="cv-header">
       <div class="container">
-        <h1 class="fade-in">技术分享</h1>
-        <p class="fade-in">记录学习与实践中的思考，涵盖系统设计、前端、后端、DevOps 等领域</p>
+        <h1 class="fade-in" data-i18n="blog.title">技术分享</h1>
+        <p class="fade-in" data-i18n="blog.desc">记录学习与实践中的思考，涵盖系统设计、前端、后端、DevOps 等领域</p>
       </div>
     </section>
 
-    <!-- Filter Tags -->
     <section style="padding: 0 0 1rem;">
       <div class="container">
         <div class="blog-filter fade-in" style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-          <button class="tag filter-tag active" data-filter="all" onclick="filterPosts('all', this)">全部</button>
+          <button class="tag filter-tag active" data-filter="all" onclick="filterPosts('all', this)" data-i18n="filter.all">全部</button>
           <button class="tag filter-tag" data-filter="system-design" onclick="filterPosts('system-design', this)">系统设计</button>
           <button class="tag filter-tag" data-filter="frontend" onclick="filterPosts('frontend', this)">前端</button>
           <button class="tag filter-tag" data-filter="devops" onclick="filterPosts('devops', this)">DevOps</button>
@@ -53,7 +35,6 @@
       </div>
     </section>
 
-    <!-- Posts List -->
     <section class="section" style="padding-top:1rem;">
       <div class="container">
         <div class="posts-grid" id="postsGrid">
@@ -148,10 +129,12 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+      <p data-i18n="footer.text" data-i18n-html>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
     </div>
   </footer>
 
+  <script src="../assets/js/navbar.js"></script>
+  <script src="../assets/js/i18n.js"></script>
   <script src="../assets/js/main.js"></script>
   <script>
     function filterPosts(category, btn) {
