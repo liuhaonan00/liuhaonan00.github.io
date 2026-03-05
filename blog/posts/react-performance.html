@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React 性能优化实战指南 | Haonan Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="logo">&lt;<span>H</span>&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../index.html">首页</a></li>
+        <li><a href="../../cv.html">简历</a></li>
+        <li><a href="../" class="active">技术分享</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+      <header class="post-header">
+        <div class="container">
+          <div class="post-meta fade-in">
+            <span class="category" style="background:var(--color-tag-bg);color:var(--color-tag-text);padding:0.2rem 0.65rem;border-radius:6px;font-weight:500;">前端</span>
+            <span>2026-02-15</span>
+            <span>约 10 分钟阅读</span>
+          </div>
+          <h1 class="fade-in">React 性能优化实战指南</h1>
+        </div>
+      </header>
+
+      <div class="post-content container fade-in">
+        <p>React 应用在规模增长后，性能问题往往会逐渐浮现。本文系统梳理常见的优化策略，帮助你构建更快的 React 应用。</p>
+
+        <h2>1. 减少不必要的重新渲染</h2>
+
+        <h3>React.memo</h3>
+        <p>对于纯展示组件，使用 <code>React.memo</code> 可以在 props 没有变化时跳过重新渲染：</p>
+        <pre><code>const UserCard = React.memo(({ name, avatar }) => {
+  return (
+    &lt;div className="user-card"&gt;
+      &lt;img src={avatar} alt={name} /&gt;
+      &lt;span&gt;{name}&lt;/span&gt;
+    &lt;/div&gt;
+  );
+});</code></pre>
+
+        <h3>useMemo 和 useCallback</h3>
+        <p><code>useMemo</code> 用于缓存计算结果，<code>useCallback</code> 用于缓存函数引用，避免子组件因引用变化而重新渲染：</p>
+        <pre><code>const filteredList = useMemo(
+  () => items.filter(item => item.status === 'active'),
+  [items]
+);
+
+const handleClick = useCallback(
+  (id) => dispatch({ type: 'SELECT', id }),
+  [dispatch]
+);</code></pre>
+        <p>注意：不要滥用 memoization。只在确认存在性能瓶颈时才使用，否则反而增加内存开销和代码复杂度。</p>
+
+        <h2>2. 代码分割（Code Splitting）</h2>
+        <p>使用 <code>React.lazy</code> 和 <code>Suspense</code> 实现路由级别的懒加载：</p>
+        <pre><code>const Dashboard = React.lazy(() => import('./pages/Dashboard'));
+const Settings = React.lazy(() => import('./pages/Settings'));
+
+function App() {
+  return (
+    &lt;Suspense fallback={&lt;Loading /&gt;}&gt;
+      &lt;Routes&gt;
+        &lt;Route path="/dashboard" element={&lt;Dashboard /&gt;} /&gt;
+        &lt;Route path="/settings" element={&lt;Settings /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/Suspense&gt;
+  );
+}</code></pre>
+
+        <h2>3. 虚拟化长列表</h2>
+        <p>渲染上万条数据时，使用虚拟化库只渲染可视区域内的元素：</p>
+        <pre><code>import { FixedSizeList } from 'react-window';
+
+&lt;FixedSizeList
+  height={600}
+  itemCount={10000}
+  itemSize={50}
+  width="100%"
+&gt;
+  {({ index, style }) => (
+    &lt;div style={style}&gt;Row {index}&lt;/div&gt;
+  )}
+&lt;/FixedSizeList&gt;</code></pre>
+
+        <h2>4. 状态管理优化</h2>
+        <ul>
+          <li>将频繁更新的状态和不常变化的状态分离到不同的 Context 中</li>
+          <li>使用 <code>useReducer</code> 替代复杂的 <code>useState</code> 组合</li>
+          <li>考虑使用 Zustand、Jotai 等轻量状态库减少不必要的重渲染</li>
+        </ul>
+
+        <h2>总结</h2>
+        <p>性能优化的首要原则是<strong>先测量，再优化</strong>。使用 React DevTools Profiler 和 Chrome Performance 面板定位真正的瓶颈，避免过早优化。好的架构设计往往比微观优化更有效。</p>
+
+        <div class="post-tags" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--color-border);">
+          <span class="tag">React</span>
+          <span class="tag">性能优化</span>
+          <span class="tag">前端</span>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="../" style="color:var(--color-text-secondary);font-size:0.9rem;">&larr; 返回文章列表</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

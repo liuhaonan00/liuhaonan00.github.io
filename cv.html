@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>简历 | Haonan Liu</title>
+  <meta name="description" content="Haonan Liu 的个人简历 - 教育经历、工作经验与技能">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">&lt;<span>H</span>&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="cv.html" class="active">简历</a></li>
+        <li><a href="blog/">技术分享</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- CV Header -->
+    <section class="cv-header">
+      <div class="container">
+        <h1 class="fade-in">个人简历</h1>
+        <p class="fade-in">Education & Experience & Skills</p>
+        <div class="cv-actions fade-in">
+          <a href="#" class="btn btn-primary"><i class="fas fa-download"></i> 下载 PDF</a>
+          <a href="mailto:haonan_liu@foxmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> 联系我</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-graduation-cap"></i> 教育经历</h2>
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="time-range">2022.09 - 2026.06（预计）</div>
+            <h3>计算机科学与技术 · 本科</h3>
+            <div class="org">XX 大学</div>
+            <div class="desc">
+              <ul>
+                <li>主修课程：数据结构与算法、操作系统、计算机网络、数据库系统、机器学习</li>
+                <li>GPA：3.8 / 4.0</li>
+                <li>获得 XX 奖学金</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="cv-section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-briefcase"></i> 工作 / 实习经历</h2>
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="time-range">2025.06 - 2025.09</div>
+            <h3>软件开发实习生</h3>
+            <div class="org">XX 科技公司</div>
+            <div class="desc">
+              <ul>
+                <li>参与核心业务后端系统的开发与维护，使用 Java / Spring Boot</li>
+                <li>设计并实现 RESTful API，支撑前端多个业务模块</li>
+                <li>优化数据库查询性能，关键接口响应时间降低 40%</li>
+                <li>编写单元测试与集成测试，覆盖率达 85%</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range">2024.12 - 2025.03</div>
+            <h3>前端开发实习生</h3>
+            <div class="org">XX 互联网公司</div>
+            <div class="desc">
+              <ul>
+                <li>使用 React + TypeScript 开发企业级管理后台</li>
+                <li>实现复杂表单、数据可视化等交互组件</li>
+                <li>与设计和产品团队紧密协作，完成多个迭代交付</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="cv-section">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-code"></i> 项目经历</h2>
+        <div class="timeline">
+          <div class="timeline-item fade-in">
+            <div class="time-range">2025.09 - 至今</div>
+            <h3>个人技术博客</h3>
+            <div class="org">个人项目</div>
+            <div class="desc">
+              <ul>
+                <li>基于 GitHub Pages 搭建的静态博客，支持暗色模式和响应式设计</li>
+                <li>撰写系统设计、前端性能优化、容器化部署等技术文章</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item fade-in">
+            <div class="time-range">2025.03 - 2025.06</div>
+            <h3>智能问答系统</h3>
+            <div class="org">课程项目</div>
+            <div class="desc">
+              <ul>
+                <li>基于 LLM 构建的智能问答系统，支持多轮对话与知识库检索</li>
+                <li>使用 RAG（Retrieval-Augmented Generation）架构提升回答准确性</li>
+                <li>后端使用 Python FastAPI，前端使用 React</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="cv-section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <h2 class="cv-section-title fade-in"><i class="fas fa-tools"></i> 技术技能</h2>
+        <div style="margin-bottom:1.5rem;" class="fade-in">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);">编程语言</h3>
+          <div class="cv-skills-grid">
+            <span class="cv-skill-tag">Python</span>
+            <span class="cv-skill-tag">Java</span>
+            <span class="cv-skill-tag">JavaScript / TypeScript</span>
+            <span class="cv-skill-tag">Go</span>
+            <span class="cv-skill-tag">C/C++</span>
+            <span class="cv-skill-tag">SQL</span>
+          </div>
+        </div>
+        <div style="margin-bottom:1.5rem;" class="fade-in">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);">框架与工具</h3>
+          <div class="cv-skills-grid">
+            <span class="cv-skill-tag">React</span>
+            <span class="cv-skill-tag">Vue.js</span>
+            <span class="cv-skill-tag">Spring Boot</span>
+            <span class="cv-skill-tag">FastAPI</span>
+            <span class="cv-skill-tag">Node.js</span>
+            <span class="cv-skill-tag">Docker</span>
+            <span class="cv-skill-tag">Kubernetes</span>
+            <span class="cv-skill-tag">Git</span>
+          </div>
+        </div>
+        <div class="fade-in">
+          <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;color:var(--color-text-secondary);">数据库与中间件</h3>
+          <div class="cv-skills-grid">
+            <span class="cv-skill-tag">MySQL</span>
+            <span class="cv-skill-tag">PostgreSQL</span>
+            <span class="cv-skill-tag">Redis</span>
+            <span class="cv-skill-tag">MongoDB</span>
+            <span class="cv-skill-tag">Kafka</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

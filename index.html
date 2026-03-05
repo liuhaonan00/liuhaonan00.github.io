@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haonan Liu | 个人主页</title>
+  <meta name="description" content="Haonan Liu 的个人博客 - 技术分享、项目经历与个人成长">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">&lt;<span>H</span>&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active">首页</a></li>
+        <li><a href="cv.html">简历</a></li>
+        <li><a href="blog/">技术分享</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero / About -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content fade-in">
+          <div class="hero-avatar">
+            <div class="avatar-placeholder">H</div>
+          </div>
+          <div class="hero-info">
+            <h1>你好，我是 Haonan 👋</h1>
+            <p class="subtitle">Software Engineer / 技术爱好者</p>
+            <p class="bio">
+              热爱技术，专注于全栈开发与系统设计。喜欢探索新技术，
+              并通过写作分享学习心得与项目经验。欢迎来到我的个人空间！
+            </p>
+            <div class="social-links">
+              <a href="https://github.com/liuhaonan00" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:haonan_liu@foxmail.com" aria-label="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/haonan-liu-786087b4/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section" style="background: var(--color-bg-alt);">
+      <div class="container">
+        <h2 class="section-title fade-in">技术栈</h2>
+        <p class="section-desc fade-in">我日常使用和擅长的技术领域</p>
+        <div class="skills-grid">
+          <div class="card skill-card fade-in">
+            <div class="skill-icon">⚡</div>
+            <h3>前端开发</h3>
+            <p>React, Vue, TypeScript, HTML/CSS, Tailwind</p>
+          </div>
+          <div class="card skill-card fade-in">
+            <div class="skill-icon">🛠</div>
+            <h3>后端开发</h3>
+            <p>Python, Java, Node.js, Go, RESTful API</p>
+          </div>
+          <div class="card skill-card fade-in">
+            <div class="skill-icon">🗄</div>
+            <h3>数据与基础设施</h3>
+            <p>MySQL, PostgreSQL, Redis, Docker, K8s</p>
+          </div>
+          <div class="card skill-card fade-in">
+            <div class="skill-icon">🤖</div>
+            <h3>AI & 机器学习</h3>
+            <p>PyTorch, TensorFlow, NLP, LLM 应用</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recent Posts -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title fade-in">最新文章</h2>
+        <p class="section-desc fade-in">技术探索与实践经验分享</p>
+        <div class="posts-grid">
+          <div class="card post-card fade-in">
+            <div class="post-meta">
+              <span class="category">系统设计</span>
+              <span>2026-03-01</span>
+            </div>
+            <h3><a href="blog/posts/system-design-notes.html">分布式系统设计学习笔记</a></h3>
+            <p class="post-excerpt">记录在学习分布式系统过程中的关键概念：CAP 理论、一致性模型、分布式事务处理方案对比与实践心得。</p>
+            <div class="post-tags">
+              <span class="tag">分布式</span>
+              <span class="tag">系统设计</span>
+            </div>
+          </div>
+          <div class="card post-card fade-in">
+            <div class="post-meta">
+              <span class="category">前端</span>
+              <span>2026-02-15</span>
+            </div>
+            <h3><a href="blog/posts/react-performance.html">React 性能优化实战指南</a></h3>
+            <p class="post-excerpt">从 memo、useMemo、useCallback 到代码分割与虚拟化列表，系统梳理 React 应用性能优化的常见策略。</p>
+            <div class="post-tags">
+              <span class="tag">React</span>
+              <span class="tag">性能优化</span>
+            </div>
+          </div>
+          <div class="card post-card fade-in">
+            <div class="post-meta">
+              <span class="category">DevOps</span>
+              <span>2026-01-20</span>
+            </div>
+            <h3><a href="blog/posts/docker-best-practices.html">Docker 容器化最佳实践</a></h3>
+            <p class="post-excerpt">总结了生产环境中 Docker 镜像构建、多阶段构建、安全扫描以及 CI/CD 集成的经验和技巧。</p>
+            <div class="post-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:2.5rem;" class="fade-in">
+          <a href="blog/" class="btn btn-outline">查看全部文章 →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

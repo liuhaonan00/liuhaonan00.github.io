@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>技术分享 | Haonan Liu</title>
+  <meta name="description" content="Haonan Liu 的技术博客 - 系统设计、前端开发、DevOps 等技术文章">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../index.html" class="logo">&lt;<span>H</span>&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../index.html">首页</a></li>
+        <li><a href="../cv.html">简历</a></li>
+        <li><a href="./" class="active">技术分享</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="cv-header">
+      <div class="container">
+        <h1 class="fade-in">技术分享</h1>
+        <p class="fade-in">记录学习与实践中的思考，涵盖系统设计、前端、后端、DevOps 等领域</p>
+      </div>
+    </section>
+
+    <!-- Filter Tags -->
+    <section style="padding: 0 0 1rem;">
+      <div class="container">
+        <div class="blog-filter fade-in" style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+          <button class="tag filter-tag active" data-filter="all" onclick="filterPosts('all', this)">全部</button>
+          <button class="tag filter-tag" data-filter="system-design" onclick="filterPosts('system-design', this)">系统设计</button>
+          <button class="tag filter-tag" data-filter="frontend" onclick="filterPosts('frontend', this)">前端</button>
+          <button class="tag filter-tag" data-filter="devops" onclick="filterPosts('devops', this)">DevOps</button>
+          <button class="tag filter-tag" data-filter="ai" onclick="filterPosts('ai', this)">AI</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts List -->
+    <section class="section" style="padding-top:1rem;">
+      <div class="container">
+        <div class="posts-grid" id="postsGrid">
+
+          <div class="card post-card fade-in" data-category="system-design">
+            <div class="post-meta">
+              <span class="category">系统设计</span>
+              <span>2026-03-01</span>
+            </div>
+            <h3><a href="posts/system-design-notes.html">分布式系统设计学习笔记</a></h3>
+            <p class="post-excerpt">记录在学习分布式系统过程中的关键概念：CAP 理论、一致性模型、分布式事务处理方案对比与实践心得。</p>
+            <div class="post-tags">
+              <span class="tag">分布式</span>
+              <span class="tag">系统设计</span>
+              <span class="tag">CAP</span>
+            </div>
+          </div>
+
+          <div class="card post-card fade-in" data-category="frontend">
+            <div class="post-meta">
+              <span class="category">前端</span>
+              <span>2026-02-15</span>
+            </div>
+            <h3><a href="posts/react-performance.html">React 性能优化实战指南</a></h3>
+            <p class="post-excerpt">从 memo、useMemo、useCallback 到代码分割与虚拟化列表，系统梳理 React 应用性能优化的常见策略。</p>
+            <div class="post-tags">
+              <span class="tag">React</span>
+              <span class="tag">性能优化</span>
+              <span class="tag">前端</span>
+            </div>
+          </div>
+
+          <div class="card post-card fade-in" data-category="devops">
+            <div class="post-meta">
+              <span class="category">DevOps</span>
+              <span>2026-01-20</span>
+            </div>
+            <h3><a href="posts/docker-best-practices.html">Docker 容器化最佳实践</a></h3>
+            <p class="post-excerpt">总结了生产环境中 Docker 镜像构建、多阶段构建、安全扫描以及 CI/CD 集成的经验和技巧。</p>
+            <div class="post-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">CI/CD</span>
+              <span class="tag">容器化</span>
+            </div>
+          </div>
+
+          <div class="card post-card fade-in" data-category="ai">
+            <div class="post-meta">
+              <span class="category">AI</span>
+              <span>2025-12-10</span>
+            </div>
+            <h3><a href="posts/rag-introduction.html">RAG 架构入门：让 LLM 拥有私有知识</a></h3>
+            <p class="post-excerpt">介绍 Retrieval-Augmented Generation 的核心思路，如何将向量检索与大语言模型结合，构建更准确的问答系统。</p>
+            <div class="post-tags">
+              <span class="tag">RAG</span>
+              <span class="tag">LLM</span>
+              <span class="tag">向量检索</span>
+            </div>
+          </div>
+
+          <div class="card post-card fade-in" data-category="system-design">
+            <div class="post-meta">
+              <span class="category">系统设计</span>
+              <span>2025-11-05</span>
+            </div>
+            <h3><a href="posts/cache-strategies.html">缓存策略全解析：从本地到分布式</a></h3>
+            <p class="post-excerpt">深入探讨 Cache-Aside、Write-Through、Write-Behind 等缓存模式，以及 Redis 在实际业务中的应用场景与踩坑经验。</p>
+            <div class="post-tags">
+              <span class="tag">缓存</span>
+              <span class="tag">Redis</span>
+              <span class="tag">系统设计</span>
+            </div>
+          </div>
+
+          <div class="card post-card fade-in" data-category="frontend">
+            <div class="post-meta">
+              <span class="category">前端</span>
+              <span>2025-10-18</span>
+            </div>
+            <h3><a href="posts/typescript-tips.html">TypeScript 高级技巧与类型体操</a></h3>
+            <p class="post-excerpt">总结 TypeScript 中条件类型、映射类型、模板字面量类型等高级用法，提升类型安全性与代码可维护性。</p>
+            <div class="post-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">类型系统</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+  <script>
+    function filterPosts(category, btn) {
+      document.querySelectorAll('.filter-tag').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.post-card').forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.style.display = '';
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px)';
+          requestAnimationFrame(() => {
+            card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          });
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>

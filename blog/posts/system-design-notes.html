@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>分布式系统设计学习笔记 | Haonan Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="logo">&lt;<span>H</span>&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../index.html">首页</a></li>
+        <li><a href="../../cv.html">简历</a></li>
+        <li><a href="../" class="active">技术分享</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+      <header class="post-header">
+        <div class="container">
+          <div class="post-meta fade-in">
+            <span class="category" style="background:var(--color-tag-bg);color:var(--color-tag-text);padding:0.2rem 0.65rem;border-radius:6px;font-weight:500;">系统设计</span>
+            <span>2026-03-01</span>
+            <span>约 8 分钟阅读</span>
+          </div>
+          <h1 class="fade-in">分布式系统设计学习笔记</h1>
+        </div>
+      </header>
+
+      <div class="post-content container fade-in">
+        <p>在构建大规模互联网应用时，分布式系统设计是绕不开的核心话题。本文记录了我在学习过程中对几个关键概念的理解与思考。</p>
+
+        <h2>CAP 理论</h2>
+        <p>CAP 理论指出，在一个分布式数据存储系统中，以下三个特性最多只能同时满足两个：</p>
+        <ul>
+          <li><strong>Consistency（一致性）</strong>：所有节点在同一时间看到相同的数据</li>
+          <li><strong>Availability（可用性）</strong>：每个请求都能得到非错误的响应</li>
+          <li><strong>Partition Tolerance（分区容错性）</strong>：系统在网络分区的情况下仍能继续运行</li>
+        </ul>
+        <p>在实际工程中，由于网络分区不可避免，我们通常需要在一致性和可用性之间做出权衡。</p>
+
+        <blockquote>
+          实际上，CAP 并不是一个"三选二"的简单问题，而是在分区发生时，你需要在 C 和 A 之间做出选择。
+        </blockquote>
+
+        <h2>一致性模型</h2>
+        <p>不同的业务场景对一致性有不同的要求，常见的一致性模型包括：</p>
+        <ul>
+          <li><strong>强一致性（Strong Consistency）</strong>：写入后立即可读到最新值，如 ZooKeeper</li>
+          <li><strong>最终一致性（Eventual Consistency）</strong>：系统保证在一定时间后数据达到一致，如 DynamoDB</li>
+          <li><strong>因果一致性（Causal Consistency）</strong>：有因果关系的操作按序可见</li>
+        </ul>
+
+        <h2>分布式事务</h2>
+        <p>在微服务架构下，跨服务的事务处理是一个挑战。常见方案包括：</p>
+
+        <h3>2PC（两阶段提交）</h3>
+        <p>协调者先发送 prepare 请求，所有参与者准备好后再发送 commit。虽然保证了强一致性，但存在阻塞和单点故障的问题。</p>
+
+        <h3>Saga 模式</h3>
+        <p>将长事务拆分为多个本地事务，每个事务有对应的补偿操作。如果某一步失败，则依次执行前面步骤的补偿操作。</p>
+
+        <pre><code>// Saga 伪代码示例
+saga:
+  step1: createOrder()        compensate: cancelOrder()
+  step2: reserveInventory()   compensate: releaseInventory()
+  step3: processPayment()     compensate: refundPayment()</code></pre>
+
+        <h3>TCC（Try-Confirm-Cancel）</h3>
+        <p>业务层面的两阶段方案：Try 阶段预留资源，Confirm 阶段确认，Cancel 阶段释放。需要业务代码配合实现幂等性。</p>
+
+        <h2>总结</h2>
+        <p>分布式系统设计没有银弹，关键在于理解业务需求，选择合适的一致性级别和事务方案。在可用性与一致性之间找到平衡点，才是系统设计的核心能力。</p>
+
+        <div class="post-tags" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--color-border);">
+          <span class="tag">分布式</span>
+          <span class="tag">系统设计</span>
+          <span class="tag">CAP</span>
+          <span class="tag">事务</span>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="../" style="color:var(--color-text-secondary);font-size:0.9rem;">&larr; 返回文章列表</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>

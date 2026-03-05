@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker 容器化最佳实践 | Haonan Liu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="../../index.html" class="logo">&lt;<span>H</span>&gt;</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../index.html">首页</a></li>
+        <li><a href="../../cv.html">简历</a></li>
+        <li><a href="../" class="active">技术分享</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:0.5rem;">
+        <button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+      <header class="post-header">
+        <div class="container">
+          <div class="post-meta fade-in">
+            <span class="category" style="background:var(--color-tag-bg);color:var(--color-tag-text);padding:0.2rem 0.65rem;border-radius:6px;font-weight:500;">DevOps</span>
+            <span>2026-01-20</span>
+            <span>约 7 分钟阅读</span>
+          </div>
+          <h1 class="fade-in">Docker 容器化最佳实践</h1>
+        </div>
+      </header>
+
+      <div class="post-content container fade-in">
+        <p>Docker 已经成为现代应用部署的标配。本文总结了在生产环境中使用 Docker 的一些最佳实践和经验教训。</p>
+
+        <h2>1. 编写高效的 Dockerfile</h2>
+
+        <h3>使用多阶段构建</h3>
+        <p>多阶段构建可以显著减小最终镜像的体积：</p>
+        <pre><code># 构建阶段
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+COPY . .
+RUN npm run build
+
+# 运行阶段
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+EXPOSE 3000
+CMD ["node", "dist/server.js"]</code></pre>
+
+        <h3>合理利用缓存层</h3>
+        <p>将变化频率低的指令放在前面，变化频率高的放在后面。例如先复制 <code>package.json</code> 安装依赖，再复制源代码，这样代码修改不会触发依赖重新安装。</p>
+
+        <h2>2. 镜像安全</h2>
+        <ul>
+          <li>使用官方基础镜像，优先选择 <code>alpine</code> 等精简版</li>
+          <li>不要在镜像中包含密钥、证书等敏感信息</li>
+          <li>使用非 root 用户运行容器</li>
+          <li>定期扫描镜像漏洞：<code>docker scout cves &lt;image&gt;</code></li>
+        </ul>
+
+        <pre><code># 使用非 root 用户
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser</code></pre>
+
+        <h2>3. Docker Compose 实践</h2>
+        <p>使用 <code>docker-compose.yml</code> 管理多容器应用，利用 profiles 区分开发和生产环境：</p>
+        <pre><code>services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    depends_on:
+      db:
+        condition: service_healthy
+
+  db:
+    image: postgres:16-alpine
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  pgdata:</code></pre>
+
+        <h2>4. CI/CD 集成</h2>
+        <p>在 CI 流水线中集成 Docker 构建和推送：</p>
+        <ul>
+          <li>使用 BuildKit 加速构建：<code>DOCKER_BUILDKIT=1 docker build .</code></li>
+          <li>利用 GitHub Actions 的缓存机制避免重复拉取基础镜像</li>
+          <li>为镜像打上语义化版本标签和 Git SHA 标签</li>
+        </ul>
+
+        <h2>总结</h2>
+        <p>容器化不仅仅是把应用打包成镜像。良好的 Dockerfile 编写习惯、安全意识和 CI/CD 流程整合，才能真正发挥 Docker 在生产环境中的价值。</p>
+
+        <div class="post-tags" style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--color-border);">
+          <span class="tag">Docker</span>
+          <span class="tag">CI/CD</span>
+          <span class="tag">容器化</span>
+          <span class="tag">DevOps</span>
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="../" style="color:var(--color-text-secondary);font-size:0.9rem;">&larr; 返回文章列表</a>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Haonan Liu. Built with ❤️ and hosted on <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+    </div>
+  </footer>
+
+  <script src="../../assets/js/main.js"></script>
+</body>
+</html>
