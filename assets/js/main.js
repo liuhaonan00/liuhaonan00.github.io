@@ -16,7 +16,7 @@
     const giscusFrame = document.querySelector('iframe.giscus-frame');
     if (giscusFrame) {
       giscusFrame.contentWindow.postMessage(
-        { giscus: { setConfig: { theme: theme === 'dark' ? 'dark' : 'light' } } },
+        { giscus: { setConfig: { theme: theme === 'dark' ? 'dark_protanopia' : 'light_protanopia' } } },
         'https://giscus.app'
       );
     }

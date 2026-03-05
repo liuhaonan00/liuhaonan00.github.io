@@ -5,7 +5,7 @@
   if (!container) return;
 
   const theme = document.documentElement.getAttribute('data-theme') === 'dark'
-    ? 'dark' : 'preferred_color_scheme';
+    ? 'dark_protanopia' : 'light_protanopia';
 
   const script = document.createElement('script');
   script.src = 'https://giscus.app/client.js';
@@ -17,9 +17,9 @@
   script.setAttribute('data-strict', '0');
   script.setAttribute('data-reactions-enabled', '1');
   script.setAttribute('data-emit-metadata', '0');
-  script.setAttribute('data-input-position', 'top');
+  script.setAttribute('data-input-position', 'bottom');
   script.setAttribute('data-theme', theme);
-  script.setAttribute('data-lang', 'zh-CN');
+  script.setAttribute('data-lang', 'en');
   script.setAttribute('data-loading', 'lazy');
   script.crossOrigin = 'anonymous';
   script.async = true;
