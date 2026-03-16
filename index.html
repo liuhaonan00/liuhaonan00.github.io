@@ -77,44 +77,7 @@
       <div class="container">
         <h2 class="section-title fade-in" data-i18n="posts.title">最新文章</h2>
         <p class="section-desc fade-in" data-i18n="posts.desc">技术探索与实践经验分享</p>
-        <div class="posts-grid">
-          <div class="card post-card fade-in">
-            <div class="post-meta">
-              <span class="category">系统设计</span>
-              <span>2026-03-01</span>
-            </div>
-            <h3><a href="blog/posts/system-design-notes.html">分布式系统设计学习笔记</a></h3>
-            <p class="post-excerpt">记录在学习分布式系统过程中的关键概念：CAP 理论、一致性模型、分布式事务处理方案对比与实践心得。</p>
-            <div class="post-tags">
-              <span class="tag">分布式</span>
-              <span class="tag">系统设计</span>
-            </div>
-          </div>
-          <div class="card post-card fade-in">
-            <div class="post-meta">
-              <span class="category">前端</span>
-              <span>2026-02-15</span>
-            </div>
-            <h3><a href="blog/posts/react-performance.html">React 性能优化实战指南</a></h3>
-            <p class="post-excerpt">从 memo、useMemo、useCallback 到代码分割与虚拟化列表，系统梳理 React 应用性能优化的常见策略。</p>
-            <div class="post-tags">
-              <span class="tag">React</span>
-              <span class="tag">性能优化</span>
-            </div>
-          </div>
-          <div class="card post-card fade-in">
-            <div class="post-meta">
-              <span class="category">DevOps</span>
-              <span>2026-01-20</span>
-            </div>
-            <h3><a href="blog/posts/docker-best-practices.html">Docker 容器化最佳实践</a></h3>
-            <p class="post-excerpt">总结了生产环境中 Docker 镜像构建、多阶段构建、安全扫描以及 CI/CD 集成的经验和技巧。</p>
-            <div class="post-tags">
-              <span class="tag">Docker</span>
-              <span class="tag">CI/CD</span>
-            </div>
-          </div>
-        </div>
+        <div class="posts-grid" id="postsGrid"></div>
         <div style="text-align:center;margin-top:2.5rem;" class="fade-in">
           <a href="blog/" class="btn btn-outline" data-i18n="posts.viewall">查看全部文章 →</a>
         </div>
@@ -128,5 +91,6 @@
   <script src="assets/js/footer.js"></script>
   <script src="assets/js/i18n.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/posts.js"></script>
 </body>
 </html>

@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "web3-interview-scam-okx-npm-install",
+    "title": "惨痛复盘：一场虚假的 Web3 面试，与一个掏空我 OKX 钱包的 npm install",
+    "date": "2026-03-16",
+    "category": "安全",
+    "categoryKey": "security",
+    "excerpt": "我从来没想过，只是跑了一个 npm install，OKX 钱包就被悄无声息地掏空。如果你做 Web3 / 前端 / Node.js，这篇文章值得你完整读一遍。",
+    "tags": ["Web3", "安全", "npm", "供应链攻击"]
+  },
+  {
+    "slug": "system-design-notes",
+    "title": "分布式系统设计学习笔记",
+    "date": "2026-03-01",
+    "category": "系统设计",
+    "categoryKey": "system-design",
+    "excerpt": "记录在学习分布式系统过程中的关键概念：CAP 理论、一致性模型、分布式事务处理方案对比与实践心得。",
+    "tags": ["分布式", "系统设计", "CAP"]
+  },
+  {
+    "slug": "react-performance",
+    "title": "React 性能优化实战指南",
+    "date": "2026-02-15",
+    "category": "前端",
+    "categoryKey": "frontend",
+    "excerpt": "从 memo、useMemo、useCallback 到代码分割与虚拟化列表，系统梳理 React 应用性能优化的常见策略。",
+    "tags": ["React", "性能优化", "前端"]
+  },
+  {
+    "slug": "docker-best-practices",
+    "title": "Docker 容器化最佳实践",
+    "date": "2026-01-20",
+    "category": "DevOps",
+    "categoryKey": "devops",
+    "excerpt": "总结了生产环境中 Docker 镜像构建、多阶段构建、安全扫描以及 CI/CD 集成的经验和技巧。",
+    "tags": ["Docker", "CI/CD", "容器化"]
+  },
+  {
+    "slug": "rag-introduction",
+    "title": "RAG 架构入门：让 LLM 拥有私有知识",
+    "date": "2025-12-10",
+    "category": "AI",
+    "categoryKey": "ai",
+    "excerpt": "介绍 Retrieval-Augmented Generation 的核心思路，如何将向量检索与大语言模型结合，构建更准确的问答系统。",
+    "tags": ["RAG", "LLM", "向量检索"]
+  },
+  {
+    "slug": "cache-strategies",
+    "title": "缓存策略全解析：从本地到分布式",
+    "date": "2025-11-05",
+    "category": "系统设计",
+    "categoryKey": "system-design",
+    "excerpt": "深入探讨 Cache-Aside、Write-Through、Write-Behind 等缓存模式，以及 Redis 在实际业务中的应用场景与踩坑经验。",
+    "tags": ["缓存", "Redis", "系统设计"]
+  },
+  {
+    "slug": "typescript-tips",
+    "title": "TypeScript 高级技巧与类型体操",
+    "date": "2025-10-18",
+    "category": "前端",
+    "categoryKey": "frontend",
+    "excerpt": "总结 TypeScript 中条件类型、映射类型、模板字面量类型等高级用法，提升类型安全性与代码可维护性。",
+    "tags": ["TypeScript", "类型系统"]
+  }
+]
