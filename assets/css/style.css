@@ -448,41 +448,49 @@ main {
 }
 
 /* ========== CV Page ========== */
-.cv-hero {
+.profile-hero {
   padding: 4.5rem 0 3rem;
   background: var(--color-bg-alt);
 }
 
-.cv-hero-content {
+.profile-hero-avatar {
+  flex-shrink: 0;
+}
+
+.profile-hero-info {
+  min-width: 0;
+}
+
+.profile-hero-content {
   display: flex;
   align-items: flex-start;
   gap: 2.5rem;
 }
 
-.cv-hero-avatar .avatar {
-  width: 120px;
-  height: 120px;
+.profile-hero-avatar .avatar {
+  width: 144px;
+  height: 144px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--color-accent);
   box-shadow: 0 0 0 6px var(--color-tag-bg);
 }
 
-.cv-hero-info h1 {
+.profile-hero-info h1 {
   font-size: 2.25rem;
   font-weight: 800;
   letter-spacing: -0.03em;
   margin-bottom: 0.35rem;
 }
 
-.cv-hero-role {
+.profile-hero-role {
   font-size: 1.05rem;
   color: var(--color-accent);
   font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.cv-hero-summary {
+.profile-hero-summary {
   color: var(--color-text-secondary);
   font-size: 0.95rem;
   line-height: 1.75;
@@ -490,13 +498,13 @@ main {
   margin-bottom: 1.25rem;
 }
 
-.cv-hero-links {
+.profile-hero-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
 }
 
-.cv-hero-links a {
+.profile-hero-links a {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
@@ -509,7 +517,7 @@ main {
   transition: all var(--transition);
 }
 
-.cv-hero-links a:hover {
+.profile-hero-links a:hover {
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-2px);
@@ -517,18 +525,23 @@ main {
 }
 
 @media (max-width: 768px) {
-  .cv-hero-content {
+  .profile-hero {
+    padding: 3rem 0;
+  }
+
+  .profile-hero-content {
+    gap: 1.5rem;
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
-  .cv-hero-summary {
+  .profile-hero-summary {
     margin-left: auto;
     margin-right: auto;
   }
 
-  .cv-hero-links {
+  .profile-hero-links {
     justify-content: center;
   }
 }

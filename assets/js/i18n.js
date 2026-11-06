@@ -14,18 +14,6 @@
     "zh": "技术分享",
     "en": "Blog"
   },
-  "hero.greeting": {
-    "zh": "你好，我是 Haonan 👋",
-    "en": "Hi, I'm Haonan 👋"
-  },
-  "hero.subtitle": {
-    "zh": "Software Engineer | AI Engineer",
-    "en": "Software Engineer | AI Engineer"
-  },
-  "hero.bio": {
-    "zh": "近 10 年软件开发经验，专注分布式系统、API 与云基础设施，经历涵盖大型平台、AI 基础设施和 Web3。擅长 Go 与 Python，目前在 AISA 担任创始工程师，曾参与 VibeTrading、Grab、IBM 和美团的系统开发。",
-    "en": "Software Engineer with nearly 10 years of experience building distributed systems, APIs, and cloud infrastructure across large-scale platforms, AI infrastructure, and Web3. Strong in Go and Python. Currently a Founding Engineer at AISA, with experience at VibeTrading, Grab, IBM, and Meituan."
-  },
   "skills.title": {
     "zh": "技术栈",
     "en": "Tech Stack"
@@ -85,22 +73,6 @@
   "blog.desc": {
     "zh": "记录学习与实践中的思考，涵盖系统设计、前端、后端、DevOps 等领域",
     "en": "Thoughts from learning and practice, covering system design, frontend, backend, DevOps and more"
-  },
-  "cv.hero.name": {
-    "zh": "Haonan Liu",
-    "en": "Haonan Liu"
-  },
-  "cv.subtitle": {
-    "zh": "Software Engineer | AI Engineer",
-    "en": "Software Engineer | AI Engineer"
-  },
-  "cv.contact": {
-    "zh": "联系我",
-    "en": "Contact"
-  },
-  "cv.summary.text": {
-    "zh": "近 10 年软件开发经验，构建过分布式系统、API 和云基础设施，经历涵盖大型平台、AI 基础设施与 Web3。擅长 Go 和 Python，拥有 LLM 服务集成、Agent 支付及加密货币交易系统的实践经验，能够负责从架构设计、实现到部署和生产运维的后端交付。",
-    "en": "Software Engineer with nearly 10 years of experience building distributed systems, APIs, and cloud infrastructure across large-scale platforms, AI infrastructure, and Web3. Strong in Go and Python, with hands-on experience in LLM service integration, agent payments, and cryptocurrency trading systems. Experienced in owning backend delivery from architecture and implementation through deployment and production operations."
   },
   "cv.experience": {
     "zh": "工作经历",
@@ -297,6 +269,22 @@
   "cv.skills.backend": {
     "zh": "后端 & 消息",
     "en": "Backend & Messaging"
+  },
+  "profile.name": {
+    "zh": "Haonan Liu",
+    "en": "Haonan Liu"
+  },
+  "profile.role": {
+    "zh": "Software Engineer | AI Engineer",
+    "en": "Software Engineer | AI Engineer"
+  },
+  "profile.summary": {
+    "zh": "近 10 年软件开发经验，专注 Go、Python、分布式系统与云基础设施。目前在 AISA 担任创始工程师，拥有 LLM 服务集成、Agent 支付和加密货币交易系统的实践经验。曾就职于 Grab、IBM 和美团，能够负责从架构设计、实现到部署及生产运维的完整交付。",
+    "en": "Software Engineer with nearly 10 years of experience in Go, Python, distributed systems, and cloud infrastructure. Currently a Founding Engineer at AISA, with hands-on experience in LLM service integration, agent payments, and cryptocurrency trading systems. Previously at Grab, IBM, and Meituan, with end-to-end ownership from architecture and implementation to deployment and production operations."
+  },
+  "profile.contact": {
+    "zh": "联系我",
+    "en": "Contact"
   }
 };
 
