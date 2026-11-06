@@ -1,6 +1,6 @@
 # liuhaonan00.github.io
 
-Personal website of **Haonan Liu** — Backend Engineer (Python & Go) | Web3 & LLM.
+Personal website of **Haonan Liu** — Software Engineer | AI Engineer.
 
 🌐 **Live site**: [liuhaonan00.github.io](https://liuhaonan00.github.io)
 
